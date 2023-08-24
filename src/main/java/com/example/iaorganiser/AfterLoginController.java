@@ -10,10 +10,14 @@ public class AfterLoginController {
 
 
     public void userLogOut(ActionEvent event) throws IOException{
-        OrganiserApplication.setRoot("hello-view.fxml");
+        OrganiserApplication.setRoot("login-view");
     }
 
     public void calendarButtonAction(ActionEvent actionEvent) throws IOException {
         OrganiserApplication.setRoot("calendar-view");
+    }
+
+    public void eventMakerButton(ActionEvent actionEvent) throws IOException {
+        OrganiserApplication.setRoot("EventMaker-view");
     }
 }

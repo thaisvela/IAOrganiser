@@ -1,23 +1,34 @@
 package com.example.iaorganiser;
 
+import java.time.LocalDate;
 import java.time.ZonedDateTime;
+import java.time.chrono.ChronoLocalDate;
 
 public class CalendarActivity {
-    private ZonedDateTime date;
+    private LocalDate date;
     private String clientName;
-    private Integer serviceNo;
+    private String serviceNo;
+    private Boolean isPaid = false;
 
-    public CalendarActivity(ZonedDateTime date, String clientName, Integer serviceNo) {
+    public CalendarActivity(LocalDate date, String clientName, String serviceNo) {
         this.date = date;
         this.clientName = clientName;
         this.serviceNo = serviceNo;
     }
 
-    public ZonedDateTime getDate() {
+    public LocalDate getDate() {
         return date;
     }
 
-    public void setDate(ZonedDateTime date) {
+    public void setPaid(Boolean paid) {
+        isPaid = paid;
+    }
+
+    public Boolean isPaid() {
+        return isPaid;
+    }
+
+    public void setDate(LocalDate date) {
         this.date = date;
     }
 
@@ -29,11 +40,11 @@ public class CalendarActivity {
         this.clientName = clientName;
     }
 
-    public Integer getServiceNo() {
+    public String getServiceNo() {
         return serviceNo;
     }
 
-    public void setServiceNo(Integer serviceNo) {
+    public void setServiceNo(String serviceNo) {
         this.serviceNo = serviceNo;
     }
 
@@ -46,5 +57,3 @@ public class CalendarActivity {
                 '}';
     }
 }
-
-

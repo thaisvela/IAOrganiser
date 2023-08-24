@@ -26,12 +26,14 @@ public class LoginController {
     @FXML
     private PasswordField password;
 
-    private void checkLogin() throws IOException {
+
+
+    public void loginButtonAction(ActionEvent actionEvent) throws IOException {
 
         if(username.getText().equals("javacoding") && password.getText().equals("123")) {
             wrongLogin.setText("Success!");
 
-            OrganiserApplication.setRoot("afterLogin.fxml");
+            OrganiserApplication.setRoot("afterlogin-view");
         }
 
         else if(username.getText().isEmpty() && password.getText().isEmpty()) {
@@ -57,8 +59,5 @@ public class LoginController {
         lockImageBox.setImage(new Image (getClass().getResourceAsStream("/lock.png")));
     }
 
-    public void loginButtonAction(ActionEvent actionEvent) throws IOException {
-        //checkLogin();
-        OrganiserApplication.setRoot("afterlogin-view");
-    }
+
 }

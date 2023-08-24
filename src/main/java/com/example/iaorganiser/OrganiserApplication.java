@@ -12,7 +12,7 @@ public class OrganiserApplication extends Application {
     public void start(Stage stage) throws IOException {
         FXMLLoader fxmlLoader = new FXMLLoader(OrganiserApplication.class.getResource("login-view.fxml"));
          scene = new Scene(fxmlLoader.load());
-        stage.setTitle("Hello!");
+        stage.setTitle("Organiser");
         stage.setScene(scene);
         stage.show();
     }
